@@ -1,18 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { NotFound } from "./pages/NotFound"
-import { Home } from "./pages/Home"
+import { Navbar } from "@/layout/Navbar";
+import { Hero } from "@/sections/Hero";
+import { Contact } from "@/sections/Contact";
+import { ChartColumnStacked } from "lucide-react";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <div className="min-h-screen overflow-x-hidden">
+      <Navbar />
+      <main>
+        <Hero />
+        <Contact />
+      </main>
+    </div>
   )
 }
 
-export default App
+export default App;
